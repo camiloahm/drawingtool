@@ -12,36 +12,5 @@ import org.apache.commons.cli.Options;
  */
 public class DrawingTool {
 
-    private Options options;
-    private CommandLineReader commandLineParser;
 
-    public DrawingTool() {
-        options = getOptions();
-        CommandLineParser parser=new DefaultParser();
-        commandLineParser=new CommandLineReader(options,parser);
-    }
-
-
-    public Options getOptions() {
-
-        Options options = new Options();
-
-
-        options.addOption(Option.builder(CommandOption.L.toString())
-                .required(false)
-                .longOpt(CommandOption.L.getOptionName())
-                .build());
-
-        options.addOption(Option.builder(CommandOption.R.toString())
-                .required(false)
-                .longOpt(CommandOption.R.getOptionName())
-                .build());
-
-        options.addOption(Option.builder(CommandOption.B.toString())
-                .required(false)
-                .longOpt(CommandOption.B.getOptionName())
-                .build());
-
-        return options;
-    }
 }

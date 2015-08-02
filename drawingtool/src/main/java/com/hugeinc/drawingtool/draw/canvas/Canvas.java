@@ -27,7 +27,7 @@ public class Canvas extends DrawableContainer {
 
         List<Drawable> drawables = new ArrayList<Drawable>();
 
-        for (Drawable drawable : drawables) {
+        for (Drawable drawable : this.drawables) {
             if (drawable.containsPoints(x, y)) {
                 drawables.add(drawable);
             }

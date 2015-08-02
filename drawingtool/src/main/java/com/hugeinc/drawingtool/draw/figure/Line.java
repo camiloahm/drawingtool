@@ -62,17 +62,19 @@ public class Line implements Drawable {
 
 
     public boolean containsPoints(int x, int y) {
-        if (isInclineIndetermined) {
-            if(x==x1)
-            {
-                return true;
-            }
-        }
 
-        if (((m * x) + b) == y) {
-            return true;
+        if (isInclineIndetermined) {
+            if (x == x1) {
+                return true;
+            } else {
+                return false;
+            }
         } else {
-            return false;
+            if (((m * x) + b) == y) {
+                return true;
+            } else {
+                return false;
+            }
         }
 
     }
